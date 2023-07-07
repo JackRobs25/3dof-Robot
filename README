@@ -4,7 +4,7 @@ and when they happen; a list of the main functions you implemented (); any extra
 
 
 This project implements approximate motion planning for a polygonal robot moving among polygonal obstacles
-in 2d with translation and rotation (3dof) using the A* algorithm. We used gridding to discretise the space 
+in 2d with translation and rotation (3dof) using the A* algorithm. Gridding is used to discretise the space 
 and the dimensions of the grid can be specified at the top of the 3dof.cpp file through the Kx and ky variables.
 The precision of rotation (the smallest angle the robot can turn in one rotation) can also be manipulated by 
 changing the Ktheta variable. 
