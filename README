@@ -1,0 +1,27 @@
+Add a README file containing: a brief, description of the project; info on the interface, 
+i.e. everything one needs to know in order to run your code; a list of known bugs (if any) 
+and when they happen; a list of the main functions you implemented (); any extra features you implemented.
+
+
+This project implements approximate motion planning for a polygonal robot moving among polygonal obstacles
+in 2d with translation and rotation (3dof) using the A* algorithm. We used gridding to discretise the space 
+and the dimensions of the grid can be specified at the top of the 3dof.cpp file through the Kx and ky variables.
+The precision of rotation (the smallest angle the robot can turn in one rotation) can also be manipulated by 
+changing the Ktheta variable. 
+
+Running the code:
+Once the program is running you can press 's' to start drawing the obstacles for the scene. Once you have drawn the 
+first obstacle you can press 'n' to start drawing a new one, each time 'n' is pressed a new obstacle will be drawn.
+Once you have drawn all the obstacles you can press 'a' to specify the start position with a mouse click and 'z' to specify the end
+position. 'r' will change the mode to draw the vertices of the robot with mouseclicks. Once all this is set up you can press 'h' to 
+generate the approximate path and this will also start the animation of the robot along the path on a loop. The animation can be paused 
+and resumed by pressing 'g'.
+
+Extra features:
+- The obstacles are filled in which required a method to triangulate the polygons (this filling can be turned on and off using 'f')
+- The robot can move diagonally in addition to up, down, left, right, +theta, -theta
+
+Bugs
+- You must set Kx and Ky values as factors of the WINDOWSIZE otherwise there will be rounding issues which will cause illegal access of 
+memory when accessing the graph
+- Animation can get slow at higher values of Kx, Ky, and Ktheta
